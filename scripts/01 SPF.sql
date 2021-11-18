@@ -25,10 +25,10 @@ begin
     values(unIdRequerimiento,unCuil,unInicio,unFin);
 end$$
 
-create procedure AltaCliente(unCuil int,unaRazonSocial varchar(50))
+create procedure AltaCliente(unCuit int,unaRazonSocial varchar(50))
 begin
-	insert into Cliente(cuil,razonSocial)
-    values(unCuil,unaRazonSocial);
+	insert into Cliente(cuit,razonSocial)
+    values(unCuit,unaRazonSocial);
 end$$
 
 create procedure AltaEmpleado(uncuil int,unNombre varchar(50),unApellido varchar(50),unaContratacion date)

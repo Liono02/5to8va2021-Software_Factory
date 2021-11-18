@@ -11,7 +11,7 @@
 
 ## Computación 2021
 
-**Programacion**: <!-- REEMPLAZA este comentario por el nombre de la asignatura -->
+**Administracion y Gestion de Base de Datos**: <!-- REEMPLAZA este comentario por el nombre de la asignatura -->
 
 **Entrega N°4 Software Factory**: <!-- REEMPLAZA este comentario por el nombre del TP -->
 
