@@ -21,7 +21,7 @@ namespace Operaciones_de_admin
                 case 2:
                 break;
                 default:
-                    Console.WriteLine("No se ha ingresado ninguna opcion");
+                    Console.WriteLine("No se ha ingresado ninguna opcion...");
                 break;
             }
         }

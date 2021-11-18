@@ -41,10 +41,13 @@ namespace Operaciones_de_admin
                 
                 case 2:
                     Console.Clear();
-                    
+                    Console.WriteLine(AdoSoftware.ObtenerClientes());
                     break;
-                
-                    
+                case 3:
+                break;
+                default:
+                Console.WriteLine("No se ha selecionado ninguna opcion...");
+                break;   
             }
 
             }while(opcionMenuAdmin!=3||OpcionMenuCliente!=3 );
