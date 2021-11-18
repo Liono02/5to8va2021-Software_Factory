@@ -5,8 +5,8 @@ namespace SoftwareFactory.Core
     public interface IAdo
     {
         void AltaCliente(Cliente cliente);
-        void AltaProyecto(Proyecto proyecto);
         List<Cliente> ObtenerClientes();
+        void AltaProyecto(Proyecto proyecto);
         List<Proyecto> ObtenerProyecto();
     }
 }

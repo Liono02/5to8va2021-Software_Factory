@@ -11,13 +11,13 @@
 
 ## Computación 2021
 
-**Asignatura**: <!-- REEMPLAZA este comentario por el nombre de la asignatura -->
+**Programacion**: <!-- REEMPLAZA este comentario por el nombre de la asignatura -->
 
-**Nombre TP**: <!-- REEMPLAZA este comentario por el nombre del TP -->
+**Entrega N°4 Software Factory**: <!-- REEMPLAZA este comentario por el nombre del TP -->
 
-**Apellido y nombre Alumno**: <!-- REEMPLAZA este comentario por tu apellido y nombre -->
+**Kippes Ezequiel**: <!-- REEMPLAZA este comentario por tu apellido y nombre -->
 
-**Curso**: <!-- REEMPLAZA este comentario por tu curso -->
+**5°8**: <!-- REEMPLAZA este comentario por tu curso -->
 
 # Título del Proyecto
 
@@ -28,7 +28,7 @@ _Acá va un párrafo que describa lo que es el proyecto._
 Clonar el repositorio github, desde Github Desktop o ejecutar en la terminal o CMD:
 <!-- cambia el link de abajo al de tu repositorio y BORRA ESTE COMENTARIO -->
 ```
-git clone https://github.com/ET12DE1Computacion/simpleTemplateCSharp
+git clone https://github.com/Liono02/5to8va2021-Software_Factory
 ```
 
 ### Pre-requisitos 📋
