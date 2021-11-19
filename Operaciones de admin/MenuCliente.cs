@@ -56,12 +56,14 @@ namespace Operaciones_de_admin
             }
             public void MostrarClientes()
             {
-                List<Cliente> clientes=new List<Cliente>(Ado.ObtenerClientes());
-            
-                
+                /*List<Cliente> clientes=new List<Cliente>(Ado.ObtenerClientes());
                 for(int i=0;i<clientes.Count;i++)
+                //  {
+                //    Console.WriteLine(clientes[i]);
+                    }*/
+                for(int i=0;i<new List<Cliente>(Ado.ObtenerClientes()).Count;i++)
                 {
-                    Console.WriteLine(clientes[i]);
+                    Console.WriteLine(new List<Cliente>(Ado.ObtenerClientes())[i]);
                 }
             }
 

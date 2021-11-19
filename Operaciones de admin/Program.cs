@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Operaciones_de_admin
 {
@@ -6,7 +6,6 @@ namespace Operaciones_de_admin
     {
         static void Main(string[] args)
         {
-            
             MenuCliente operaciones = new MenuCliente();
             int Opcion;
             Console.WriteLine("----------SOFTWARE FACTORY--MENU DE OPERACIONES----------");
