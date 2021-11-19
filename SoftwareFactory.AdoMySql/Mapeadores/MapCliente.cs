@@ -38,5 +38,6 @@ namespace SoftwareFactory.AdoMySql.Mapeadores
 
         }
         public List<Cliente> ObtenerClientes() => ColeccionDesdeTabla();
+        
     }   
 }

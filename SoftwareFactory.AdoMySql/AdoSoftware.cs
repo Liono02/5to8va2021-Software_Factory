@@ -17,5 +17,6 @@ namespace SoftwareFactory.AdoMySql
         }
         public void AltaCliente(Cliente cliente) =>MapCliente.AltaCliente(cliente);
         public List<Cliente> ObtenerClientes() => MapCliente.ObtenerClientes(); 
+        
     }
 }

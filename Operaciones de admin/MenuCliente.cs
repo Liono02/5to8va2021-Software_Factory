@@ -16,8 +16,6 @@ namespace Operaciones_de_admin
         {
             int opcionMenuAdmin=Opcion;
             int OpcionMenuCliente;
-            int CUIT;
-            string RazonSocial;
             do
             {
             Console.Clear();
@@ -30,29 +28,42 @@ namespace Operaciones_de_admin
             switch(OpcionMenuCliente)
             {
                 case 1:
-                    Console.Clear();
-                    Console.Write("Ingrese un numero de CUIT: ");
-                    CUIT=Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("Ingrese una razon social: ");
-                    RazonSocial=Convert.ToString(Console.ReadLine());
-
-                    AdoSoftware.AltaCliente(new Cliente (CUIT,RazonSocial));
-                break;
-                
+                    DarAltaCliente();
+                    break;
                 case 2:
-                    Console.Clear();
-                    Console.WriteLine(AdoSoftware.ObtenerClientes());
+                    MostrarClientes();
                     break;
                 case 3:
-                break;
+                    break;
                 default:
-                Console.WriteLine("No se ha selecionado ninguna opcion...");
-                break;   
+                    Console.WriteLine("No se ha selecionado ninguna opcion...");
+                    break;   
             }
 
             }while(opcionMenuAdmin!=3||OpcionMenuCliente!=3 );
         }
+            public void DarAltaCliente()
+            {
+                int CUIT;
+                string RazonSocial;
+                Console.Clear();
+                Console.Write("Ingrese un numero de CUIT: ");
+                CUIT=Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Ingrese una razon social: ");
+                RazonSocial=Convert.ToString(Console.ReadLine());
 
+                AdoSoftware.AltaCliente(new Cliente (CUIT,RazonSocial));
+            }
+            public void MostrarClientes()
+            {
+                List<Cliente> clientes=new List<Cliente>(AdoSoftware.ObtenerClientes());
+                   
+                Console.Clear();
+                for(int i=0;i<clientes.Count;i++)
+                {
+                    Console.WriteLine(clientes[i]);
+                }
+            }
 
     }
 }
