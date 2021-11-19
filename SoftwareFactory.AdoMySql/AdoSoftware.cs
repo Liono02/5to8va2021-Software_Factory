@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using et12.edu.ar.AGBD.Mapeadores;
 using et12.edu.ar.AGBD.Ado;
 using SoftwareFactory.Core;
+using SoftwareFactory.AdoMySql.Mapeadores;
 
 namespace SoftwareFactory.AdoMySql
 {
-    public class AdoSoftware
+    public class AdoSoftware:IAdo
     {
-        public AdoMySql Ado{ get; set; }
-        public AdoMySql MapCliente{ get; set; }
+        public AdoAGBD Ado{ get; set; }
+        public MapCliente MapCliente{ get; set; }
         public AdoSoftware(AdoAGBD ado)
         {
             Ado=ado;
