@@ -22,6 +22,7 @@ namespace Operaciones_de_admin
                 Console.WriteLine("(2) Mostrar a los clientes");
                 Console.WriteLine("(3) Salir");
                 Console.Write("Ingrese la opcion deseada: ");
+                
                 OpcionMenuCliente=Convert.ToInt16(Console.ReadLine());
                 switch(OpcionMenuCliente)
                 {
@@ -32,31 +33,32 @@ namespace Operaciones_de_admin
                         MostrarClientes();
                         break;
                     case 3:
+                        opcionMenuAdmin = 3;
                         break;
                     default:
                         Console.WriteLine("No se ha selecionado ninguna opcion...");
                         break;   
                 }
 
-            }while(opcionMenuAdmin!=3||OpcionMenuCliente!=3 );
+            }while(opcionMenuAdmin!=3);
         }
             public void DarAltaCliente()
             {
-                int CUIT;
-                string RazonSocial;
+                int cUIT;
+                string razonSocial;
                 Console.Clear();
                 Console.Write("Ingrese un numero de CUIT: ");
-                CUIT=Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Ingrese una razon social: ");
-                RazonSocial=Convert.ToString(Console.ReadLine());
+                cUIT=Convert.ToInt32(Console.ReadLine());
+                Console.Write("Ingrese una razon social: ");
+                razonSocial=Convert.ToString(Console.ReadLine());
 
-                Ado.AltaCliente(new Cliente (CUIT,RazonSocial));
+                Ado.AltaCliente(new Cliente (cUIT,razonSocial));
             }
             public void MostrarClientes()
             {
                 List<Cliente> clientes=new List<Cliente>(Ado.ObtenerClientes());
             
-                Console.Clear();
+                
                 for(int i=0;i<clientes.Count;i++)
                 {
                     Console.WriteLine(clientes[i]);

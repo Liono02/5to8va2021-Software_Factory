@@ -26,7 +26,7 @@ namespace SoftwareFactory.AdoMySql.Mapeadores
         {
             SetComandoSP("altaCliente");
 
-            BP.CrearParametro("unCliente")
+            BP.CrearParametro("unCuit")
             .SetValor(cliente.CUIT)
             .SetTipo(MySql.Data.MySqlClient.MySqlDbType.Int32)
             .AgregarParametro();
