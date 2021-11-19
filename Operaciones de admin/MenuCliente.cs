@@ -21,7 +21,7 @@ namespace Operaciones_de_admin
                 Console.WriteLine("(1) Ingresar un cliente");
                 Console.WriteLine("(2) Mostrar a los clientes");
                 Console.WriteLine("(3) Salir");
-                Console.Write("Ingrese la opcion deseada");
+                Console.Write("Ingrese la opcion deseada: ");
                 OpcionMenuCliente=Convert.ToInt16(Console.ReadLine());
                 switch(OpcionMenuCliente)
                 {
