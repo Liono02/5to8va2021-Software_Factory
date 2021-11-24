@@ -9,9 +9,9 @@ namespace Operaciones_de_admin
     class MenuCliente
     {
         IAdo Ado = new AdoSoftware(FactoryAdoAGBD.GetAdoMySQL("appSettings.json", "admin"));
-        public void MenuParaClientes( int Opcion) 
+        public void MenuParaClientes(int Opcion)
         {
-            int opcionMenuAdmin=Opcion;
+            int opcionMenuAdmin = Opcion;
             int OpcionMenuCliente;
 
             do
@@ -22,9 +22,9 @@ namespace Operaciones_de_admin
                 Console.WriteLine("(2) Mostrar a los clientes");
                 Console.WriteLine("(3) Salir");
                 Console.Write("Ingrese la opcion deseada: ");
-                
-                OpcionMenuCliente=Convert.ToInt16(Console.ReadLine());
-                switch(OpcionMenuCliente)
+
+                OpcionMenuCliente = Convert.ToInt16(Console.ReadLine());
+                switch (OpcionMenuCliente)
                 {
                     case 1:
                         DarAltaCliente();
@@ -37,44 +37,44 @@ namespace Operaciones_de_admin
                         break;
                     default:
                         Console.WriteLine("No se ha selecionado ninguna opcion...");
-                        break;   
+                        break;
                 }
 
-            }while(opcionMenuAdmin!=3);
+            } while (opcionMenuAdmin != 3);
         }
-            public void DarAltaCliente()
-            {
-                int cUIT;
-                string razonSocial;
-                Console.Clear();
-                Console.Write("Ingrese un numero de CUIT: ");
-                cUIT=Convert.ToInt32(Console.ReadLine());
-                Console.Write("Ingrese una razon social: ");
-                razonSocial=Convert.ToString(Console.ReadLine());
+        public void DarAltaCliente()
+        {
+            int cUIT;
+            string razonSocial;
+            Console.Clear();
+            Console.Write("Ingrese un numero de CUIT: ");
+            cUIT = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Ingrese una razon social: ");
+            razonSocial = Convert.ToString(Console.ReadLine());
 
-                Ado.AltaCliente(new Cliente (cUIT,razonSocial));
-            }
-            public void MostrarClientes()
-            {
-                //Solucion 1
-                /*List<Cliente> clientes=new List<Cliente>(Ado.ObtenerClientes());
-                for(int i=0;i<clientes.Count;i++)
-                //  {
-                //    Console.WriteLine(clientes[i]);
-                    }*/
-               //Solucion 2
-                for(int i=0;i<new List<Cliente>(Ado.ObtenerClientes()).Count+1;i++)
-                {
-                    Console.WriteLine(new List<Cliente>(Ado.ObtenerClientes())[i]);
-                }
-                //Solucion 3
-                /*List<Cliente> clientes=new List<Cliente>();
-                clientes.AddRange(new List<Cliente>(Ado.ObtenerClientes()));
-                for(int i=0;i<clientes.Count+1;i++)
-                {
-                    Console.WriteLine(clientes[i]);
+            Ado.AltaCliente(new Cliente(cUIT, razonSocial));
+        }
+        public void MostrarClientes()
+        {
+            //Solucion 1
+           /* List<Cliente> clientes=new List<Cliente>(Ado.ObtenerClientes());
+            for(int i=0;i<clientes.Count;i++)
+            //  {
+            //    Console.WriteLine(clientes[i]);
                 }*/
+            //Solucion 2
+            /*for(int i=0;i<new List<Cliente>(Ado.ObtenerClientes()).Count+1;i++)
+            {
+                Console.WriteLine(new List<Cliente>(Ado.ObtenerClientes())[i]);
+            }*/
+            //Solucion 3
+            List<Cliente> clientes = Ado.ObtenerClientes();
+            for (int i = 0; i < clientes.Count; i++)
+            {
+                Console.WriteLine(clientes[i]);
             }
+            Console.ReadKey();
+        }
 
     }
 }
