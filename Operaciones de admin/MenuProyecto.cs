@@ -84,9 +84,8 @@ namespace Operaciones_de_admin
             Console.WriteLine("-----LISTA DE PROYECTOS-----");
             List<Proyecto> proyectos = Ado.ObtenerProyectos();
             for (int i = 0; i < proyectos.Count; i++)
-            {
-                
-                Console.WriteLine(proyectos[i]);
+            {                
+                Console.WriteLine($"{proyectos[i].IdProyecto} - {proyectos[i].Descripcion} - {proyectos[i].Cliente.RazonSocial}");
             }
             Console.ReadKey();
         }

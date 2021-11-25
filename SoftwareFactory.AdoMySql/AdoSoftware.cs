@@ -15,7 +15,7 @@ namespace SoftwareFactory.AdoMySql
         {
             Ado = ado;
             MapCliente = new MapCliente(Ado);
-            MapProyecto= new MapProyecto(Ado);
+            MapProyecto= new MapProyecto(MapCliente);
         }
         public void AltaCliente(Cliente cliente) => MapCliente.AltaCliente(cliente);
         public List<Cliente> ObtenerClientes() => MapCliente.ObtenerClientes();

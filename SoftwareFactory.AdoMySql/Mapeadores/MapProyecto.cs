@@ -15,6 +15,9 @@ namespace SoftwareFactory.AdoMySql.Mapeadores
         {
             Tabla="Proyecto";
         }
+
+        public MapProyecto(MapCliente mapCliente): this(mapCliente.AdoAGBD)
+            => MapCliente = mapCliente;
         public override Proyecto ObjetoDesdeFila(DataRow fila)
         => new Proyecto()
         {
@@ -23,7 +26,7 @@ namespace SoftwareFactory.AdoMySql.Mapeadores
             Descripcion = Convert.ToString(fila["Descripcion"]),
             Presupuesto = Convert.ToDecimal(fila["Presupuesto"]),
             Inicio = Convert.ToDateTime(fila["Inicio"]),
-            Fin = Convert.ToDateTime(fila["Fin"])
+            Fin = Convert.ToDateTime(fila["Fin"] != DBNull.Value ? fila["Fin"] : null )
         };
         
         public void AltaProyecto(Proyecto proyecto)

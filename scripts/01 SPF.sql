@@ -119,8 +119,7 @@ begin
 end$$
 
 delimiter $$
-
-create Procedure ClientePorCuit(int unCuit)
+create Procedure ClientePorCuit(unCuit int)
 begin
     Select *
     from Cliente
