@@ -6,42 +6,9 @@ using SoftwareFactory.AdoMySql;
 
 namespace Operaciones_de_admin
 {
-    class MenuCliente
+    public class MenuCliente
     {
         IAdo Ado = new AdoSoftware(FactoryAdoAGBD.GetAdoMySQL("appSettings.json", "admin"));
-        public void MenuParaClientes(int Opcion)
-        {
-            int opcionMenuAdmin = Opcion;
-            int OpcionMenuCliente;
-
-            do
-            {
-                Console.Clear();
-                Console.WriteLine("----------MENU DE OPERACIONES SOBRE CLIENTES----------");
-                Console.WriteLine("(1) Ingresar un cliente");
-                Console.WriteLine("(2) Mostrar a los clientes");
-                Console.WriteLine("(3) Salir");
-                Console.Write("Ingrese la opcion deseada: ");
-
-                OpcionMenuCliente = Convert.ToInt16(Console.ReadLine());
-                switch (OpcionMenuCliente)
-                {
-                    case 1:
-                        DarAltaCliente();
-                        break;
-                    case 2:
-                        MostrarClientes();
-                        break;
-                    case 3:
-                        opcionMenuAdmin = 3;
-                        break;
-                    default:
-                        Console.WriteLine("No se ha selecionado ninguna opcion...");
-                        break;
-                }
-
-            } while (opcionMenuAdmin != 3);
-        }
         public void DarAltaCliente()
         {
             int cUIT;
@@ -56,6 +23,7 @@ namespace Operaciones_de_admin
         }
         public void MostrarClientes()
         {
+            Console.Clear();
             Console.WriteLine("-----LISTA DE CLIENTES-----");
             List<Cliente> clientes = Ado.ObtenerClientes();
             for (int i = 0; i < clientes.Count; i++)
