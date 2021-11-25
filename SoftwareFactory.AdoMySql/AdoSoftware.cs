@@ -3,6 +3,7 @@ using et12.edu.ar.AGBD.Ado;
 using SoftwareFactory.Core;
 using SoftwareFactory.AdoMySql.Mapeadores;
 
+
 namespace SoftwareFactory.AdoMySql
 {
     public class AdoSoftware : IAdo
@@ -13,6 +14,7 @@ namespace SoftwareFactory.AdoMySql
         {
             Ado = ado;
             MapCliente = new MapCliente(Ado);
+            MapProyecto= new MapProyecto(Ado);
         }
         public void AltaCliente(Cliente cliente) => MapCliente.AltaCliente(cliente);
         public List<Cliente> ObtenerClientes() => MapCliente.ObtenerClientes();
