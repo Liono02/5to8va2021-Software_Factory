@@ -117,3 +117,12 @@ begin
     
     return costoProyecto;
 end$$
+
+delimiter $$
+
+create Procedure ClientePorCuit(int unCuit)
+begin
+    Select *
+    from Cliente
+    where cuit=unCuit;
+end$$

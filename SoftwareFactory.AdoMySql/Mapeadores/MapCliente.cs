@@ -38,6 +38,16 @@ namespace SoftwareFactory.AdoMySql.Mapeadores
 
         }
         public List<Cliente> ObtenerClientes() => ColeccionDesdeTabla();
-        
+        public Cliente ClientePorCuit(int cuit)
+        {
+            SetComandoSP("ClientePorCuit");
+
+            BP.CrearParametro("unCuit")
+            .SetTipo(MySql.Data.MySqlClient.MySqlDbType.Int32)
+            .SetValor(cuit)
+            .AgregarParametro();
+
+            return ElementoDesdeSP();
+        }
     }   
 }

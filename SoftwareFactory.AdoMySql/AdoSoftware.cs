@@ -10,6 +10,7 @@ namespace SoftwareFactory.AdoMySql
     {
         public AdoAGBD Ado { get; set; }
         public MapCliente MapCliente { get; set; }
+        public MapProyecto MapProyecto { get; set; }
         public AdoSoftware(AdoAGBD ado)
         {
             Ado = ado;
@@ -18,6 +19,7 @@ namespace SoftwareFactory.AdoMySql
         }
         public void AltaCliente(Cliente cliente) => MapCliente.AltaCliente(cliente);
         public List<Cliente> ObtenerClientes() => MapCliente.ObtenerClientes();
-
+        public void AltaProyecto(Proyecto proyecto) => MapProyecto.AltaProyecto(proyecto);
+        public List<Proyecto> ObtenerProyectos() => MapProyecto.ObtenerProyectos();
     }
 }
