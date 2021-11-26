@@ -21,7 +21,7 @@ namespace SoftwareFactory.AdoMySql.Mapeadores
         public override Proyecto ObjetoDesdeFila(DataRow fila)
         => new Proyecto()
         {
-            IdProyecto = Convert.ToInt16(fila["idProyecto"]),
+            IdProyecto=Convert.ToByte(fila["idProyecto"]),
             Cliente = MapCliente.ClientePorCuit(Convert.ToInt32(fila["CUIT"])),
             Descripcion = Convert.ToString(fila["Descripcion"]),
             Presupuesto = Convert.ToDecimal(fila["Presupuesto"]),
@@ -35,9 +35,8 @@ namespace SoftwareFactory.AdoMySql.Mapeadores
         {
             SetComandoSP("altaProyecto");
 
-            BP.CrearParametro("unIdProyecto")
-            .SetValor(proyecto.IdProyecto)
-            .SetTipo(MySql.Data.MySqlClient.MySqlDbType.Int32)
+            BP.CrearParametroSalida("unIdProyecto")
+            .SetTipo(MySql.Data.MySqlClient.MySqlDbType.UByte)
             .AgregarParametro();
 
             BP.CrearParametro("unCuit")

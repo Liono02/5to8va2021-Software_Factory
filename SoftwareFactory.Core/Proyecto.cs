@@ -12,9 +12,8 @@ namespace SoftwareFactory.Core
         public DateTime? Fin { get; set; }
 
         public Proyecto() { }
-        public Proyecto(short idProyecto, Cliente cliente, string descripcion, decimal presupuesto, DateTime inicio)
+        public Proyecto(Cliente cliente, string descripcion, decimal presupuesto, DateTime inicio)
         {
-            IdProyecto = idProyecto;
             Cliente = cliente;
             Descripcion = descripcion;
             Presupuesto = presupuesto;

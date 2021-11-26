@@ -12,7 +12,7 @@ namespace Operaciones_de_admin
         
         public void DarAltaProyecto()
         {
-            short idProyecto;
+            
             string Descripcion;
             decimal Presupuesto;
             DateTime Inicio;
@@ -20,8 +20,7 @@ namespace Operaciones_de_admin
             Fin=null;
 
             Console.Clear();
-            Console.Write("Ingrese un id de proyecto: ");
-            idProyecto = Convert.ToByte(Console.ReadLine());
+            
             Cliente cliente = SeleccionarCliente();
             Console.Write("Ingrese una descripcion: ");
             Descripcion=Convert.ToString(Console.ReadLine());
@@ -30,7 +29,7 @@ namespace Operaciones_de_admin
             Console.Write("Ingrese una fecha de inicio: ");
             Inicio=Convert.ToDateTime(Console.ReadLine());
 
-            Ado.AltaProyecto(new Proyecto(idProyecto, cliente, Descripcion, Presupuesto, Inicio ));
+            Ado.AltaProyecto(new Proyecto(cliente, Descripcion, Presupuesto, Inicio ));
         }
 
         private Cliente SeleccionarCliente()
@@ -51,10 +50,10 @@ namespace Operaciones_de_admin
         {
             Console.WriteLine("-----LISTA DE PROYECTOS-----");
             List<Proyecto> proyectos = Ado.ObtenerProyectos();
-            Console.WriteLine("-- ID DEL PROYECTO -- DESCRIPCION -- RAZON SOCIAL --");
+            Console.WriteLine("-- DESCRIPCION -- RAZON SOCIAL -- PRESUPUESTO -- FECHA/HORA --");
             for (int i = 0; i < proyectos.Count; i++)
             {                
-                Console.WriteLine($"{proyectos[i].IdProyecto} - {proyectos[i].Descripcion} - {proyectos[i].Cliente.RazonSocial}");
+                Console.WriteLine($"{proyectos[i].IdProyecto} - {proyectos[i].Descripcion} - {proyectos[i].Cliente.RazonSocial} - {proyectos[i].Presupuesto} - {proyectos[i].Inicio}");
             }
             Console.ReadKey();
         }

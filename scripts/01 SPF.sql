@@ -13,10 +13,11 @@ begin
     values(unIdRequerimiento,unIdProyecto,unIdTecnologia,unaDescripcion,unaCompejidad);
 end$$
 
-create procedure AltaProyecto(unIdProyecto smallint,unCuit int,unaDescripcion varchar(200),unPresupuesto decimal(10,2),unInicio date,unFin date)
+create procedure AltaProyecto(out unIdProyecto tinyint unsigned;unCuit int,unaDescripcion varchar(200),unPresupuesto decimal(10,2),unInicio date,unFin date)
 begin
-	insert into Proyecto(idProyecto,cuit,descripcion,presupuesto,inicio,fin)
-    values(unIdProyecto,unCuit,unaDescripcion,unPresupuesto,unInicio,unFin);
+	insert into Proyecto(cuit,descripcion,presupuesto,inicio,fin)
+    values(unCuit,unaDescripcion,unPresupuesto,unInicio,unFin);
+    set unIdProyecto=LAST_INSERT_ID();
 end$$
 
 create procedure AltaTarea(unIdRequerimiento int,unCuil int,unInicio date,unFin date)

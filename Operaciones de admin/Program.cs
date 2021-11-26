@@ -42,6 +42,7 @@ namespace Operaciones_de_admin
                                     operacionesCliente.MostrarClientes();
                                     break;
                                 case 3:
+                                    Console.Clear();
                                     break;
                                 default:
                                     Console.WriteLine("No se ha selecionado ninguna opcion...");
@@ -69,6 +70,7 @@ namespace Operaciones_de_admin
                                     operacionesProyecto.MostrarProyectos();
                                     break;
                                 case 3:
+                                    Console.Clear();
                                     break;
                                 default:
                                     Console.WriteLine("No se ha selecionado ninguna opcion...");
