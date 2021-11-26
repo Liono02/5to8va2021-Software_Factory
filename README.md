@@ -11,24 +11,24 @@
 
 ## Computación 2021
 
-**Asignatura**: <!-- REEMPLAZA este comentario por el nombre de la asignatura -->
+**Asignatura**: Administracion y Gestion de Base de Datos
 
-**Nombre TP**: <!-- REEMPLAZA este comentario por el nombre del TP -->
+**Nombre TP**: Entrega N°4 Software Factory
 
-**Apellido y nombre Alumno**: <!-- REEMPLAZA este comentario por tu apellido y nombre -->
+**Apellido y nombre Alumno**: Kippes Ezequiel
 
-**Curso**: <!-- REEMPLAZA este comentario por tu curso -->
+**Curso**: 5°8 Informatica
 
 # Título del Proyecto
 
-_Acá va un párrafo que describa lo que es el proyecto._
+Entrega N°4 Software Factory
 
 ## Comenzando 🚀
 
 Clonar el repositorio github, desde Github Desktop o ejecutar en la terminal o CMD:
 <!-- cambia el link de abajo al de tu repositorio y BORRA ESTE COMENTARIO -->
 ```
-git clone https://github.com/ET12DE1Computacion/simpleTemplateCSharp
+git clone https://github.com/Liono02/5to8va2021-Software_Factory
 ```
 
 ### Pre-requisitos 📋
@@ -53,6 +53,7 @@ Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones
 
 _Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
 
+* **Kippes Ezequiel** -*Desarrollo y documentacion*-[Liono02](https://github.com/Liono02)
 * **Max Power** - *Desarrollo* - [Maxpower](https://github.com/maxpower)
 * **Cosme Fulanito** - *Documentación* - [Cosmefulanito](#Cosmefulanito)
 
